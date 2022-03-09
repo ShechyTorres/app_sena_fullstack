@@ -1,0 +1,32 @@
+.main-home {
+  border: 1px solid red;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  right: 0%;
+  left: 0%;
+}
+
+.nav-home {
+  border: 1px solid red;
+  /* background-color: black; */
+}
+
+.miniLogoSena {
+  height: 40px;
+}
+
+.div-home {
+  border: 2px solid purple;
+  bottom: 0%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.izquierda-home {
+  border: 1px solid blue;
+}
+
+.derecha-home {
+  border: 1px solid green;
+}

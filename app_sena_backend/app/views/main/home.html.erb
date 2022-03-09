@@ -1,2 +1,28 @@
-<h1>Main#home</h1>
-<p>Find me in app/views/main/home.html.erb</p>
+<html>
+  <head>
+    <%= stylesheet_link_tag "home.scss" %>
+    <title>AppSena</title>
+  </head>
+  <body>  
+    <main class="main-home">
+    <header>
+      <nav class="nav-home">
+        <%= image_tag "logoSena.png", class: "miniLogoSena" %>
+      </nav>
+    </header>
+    <div class="div-home">
+      <section class="izquierda-home">
+        <ul>
+          <li><a href="#">Areas</a></li>
+          <li><a href="#">Programas</a></li>
+          <li><a href="#">Cursos</a></li>
+        </ul>
+      </section>
+      <section class="derecha-home">
+        <h1>Main#home</h1>
+        <p>Find me in app/views/main/home.html.erb</p>
+      </section>
+    </div>
+    </main>
+  </body>
+</html>
