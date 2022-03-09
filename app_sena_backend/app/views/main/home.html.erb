@@ -1,6 +1,6 @@
 <html>
   <head>
-    <%= stylesheet_link_tag "home.scss" %>
+    <%= stylesheet_link_tag "home" %>
     <title>AppSena</title>
   </head>
   <body>  
@@ -8,6 +8,9 @@
     <header>
       <nav class="nav-home">
         <%= image_tag "logoSena.png", class: "miniLogoSena" %>
+      <%# user_signed_in? %>
+      <%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete %>
+      <%# link_to "Iniciar", new_user_session_path %>
       </nav>
     </header>
     <div class="div-home">
