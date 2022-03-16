@@ -2,7 +2,7 @@
 <html>
   <head>
     <%= stylesheet_link_tag "log_in" %>
-    <title>Log in</title>
+    <title>Iniciar Sesión</title>
   </head>
   <body>
     <main class="main-new">
@@ -16,7 +16,7 @@
 
           <div class="field centrar">
             <%# f.label :password %><br />
-            <%= f.password_field :password, autocomplete: "current-password", placeholder: "contraseña", class: "casilla" %>
+            <%= f.password_field :password, autocomplete: "current-password", placeholder: "Contraseña", class: "casilla" %>
           </div>
           <br>
 
@@ -29,7 +29,7 @@
           <br>
 
           <div class="actions centrar">
-            <%= f.submit "Entrar" %>
+            <%= f.submit "Entrar", class: "btn" %>
           </div>
         <% end %>
         <br>
@@ -41,8 +41,11 @@
 
       <section class="derecha">
         <%= image_tag "logoSena.png", class: "logoSena" %>
-        <h1>SENA</h1>
-        <p>309093093</p>
+        <h1>Centro Industrial y de Aviación</h1>
+        <p> 
+          <%= image_tag "http://assets.stickpng.com/images/580b57fcd9996e24bc43c543.png", class: "logoWhatsapp" %>
+          3090930930
+        </p>
       </section>
     </main>
   </body>

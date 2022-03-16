@@ -1,6 +1,7 @@
 * {
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
 .main-new {
   background-color: grey;
   background-image: url("https://auren.com/co/wp-content/uploads/2019/12/segunda-convocatoria-sena-2018.png");
@@ -20,7 +21,7 @@
 .izquierda {
   border-radius: 20px;
   width: 300px;
-  height: 300px;
+  height: 330px;
   background-color: white;
 }
 
@@ -34,18 +35,65 @@
   border-radius: 10px;
 }
 
+
+/* .btn {
+  background-color: rgb(55, 0, 255);
+  color: white;
+  width: 70px;
+  height: 25px;
+  border-radius: 10px;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+} */
+
+.btn {
+  background-color: #4CAF50;
+  color: #fff;
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 7px #999;
+}
+
+.btn:hover {
+  background-color: #3e8e41
+}
+
+.btn:active {
+  background-color: #3e8e41;
+  box-shadow: 0 4px #666;
+  transform: translateY(3px);
+}
+
 .links-home {
   padding-left: 10px;
 }
 
 .derecha {
   background-color: white;
+  background-image: url("https://www.sena-sofia-plus.co/wp-content/uploads/2013/07/Carreras-tecnicas-en-Sena-Sofia-Plus-.png");
+  background-position: 95% 75%;
+  background-repeat: no-repeat;
   border-radius: 20px;
   width: 400px;
-  height: 300px;
+  height: 330px;
   text-align: center;
+  color: white;
 }
 
 .logoSena {
   height: 100px;
+  margin-top: 40px;
+}
+
+.logoWhatsapp {
+  height: 20px;
 }
