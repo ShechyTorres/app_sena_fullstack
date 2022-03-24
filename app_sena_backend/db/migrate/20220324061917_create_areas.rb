@@ -1,0 +1,11 @@
+class CreateAreas < ActiveRecord::Migration[7.0]
+  def change
+    create_table :areas do |t|
+      t.string :url_area
+      t.string :title_area
+      t.string :content_area
+
+      t.timestamps
+    end
+  end
+end

@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_03_07_202703) do
+ActiveRecord::Schema[7.0].define(version: 2022_03_24_061917) do
+  create_table "areas", force: :cascade do |t|
+    t.string "url_area"
+    t.string "title_area"
+    t.string "content_area"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
