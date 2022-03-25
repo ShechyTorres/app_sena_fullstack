@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema[7.0].define(version: 2022_03_24_061917) do
   create_table "areas", force: :cascade do |t|
-    t.string "url_area"
+    t.string "image_area"
     t.string "title_area"
     t.string "content_area"
     t.datetime "created_at", null: false
