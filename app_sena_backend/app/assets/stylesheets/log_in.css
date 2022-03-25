@@ -3,10 +3,7 @@
 }
 
 .main-new {
-  background-color: grey;
-  background-image: url("https://auren.com/co/wp-content/uploads/2019/12/segunda-convocatoria-sena-2018.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
+  background-color: white;
   position: absolute;
   top: 0%;
   bottom: 0%;
@@ -14,15 +11,58 @@
   left: 0%;
   /* background-color: rgb(252, 200, 133); */
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between;
+  padding-right: 25px;
 }
 
 .izquierda {
-  border-radius: 20px;
-  width: 300px;
-  height: 330px;
+  background-image: url("https://auren.com/co/wp-content/uploads/2019/12/segunda-convocatoria-sena-2018.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 915px;
   background-color: white;
+}
+
+.derecha {
+  background-color: transparent;
+  /* background-image: url("https://www.sena-sofia-plus.co/wp-content/uploads/2013/07/Carreras-tecnicas-en-Sena-Sofia-Plus-.png");
+  background-position: 95% 75%;
+  background-repeat: no-repeat; */
+  border-radius: 20px;
+  width: 350px;
+  /* height: 330px; */
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* flex-direction: column-reverse;
+  align-items: flex-end; */
+}
+
+.derecha-arriba {
+  border: 2px solid #000000;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-around;
+  box-shadow: 7px 7px 15px #000000;
+}
+
+.derecha-abajo {
+  border: 2px solid #000000;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 7px 7px 15px #000000;
+}
+
+.logoSena {
+  height: 150px;
+  width: 155px;
+  margin-top: 15px;
+}
+
+.logoMini {
+  height: 20px;
 }
 
 .centrar {
@@ -52,7 +92,7 @@
   background-color: #4CAF50;
   color: #fff;
   display: inline-block;
-  padding: 10px 15px;
+  padding: 8px 15px;
   margin-top: 5px;
   font-size: 14px;
   cursor: pointer;
@@ -60,41 +100,25 @@
   text-decoration: none;
   outline: none;
   border: none;
-  border-radius: 15px;
-  box-shadow: 0 7px #999;
+  border-radius: 5px;
+  border: 2px solid #000000;
+  box-shadow: 5px 6px 4px #000;
+  /* -webkit-box-shadow: 11px 13px 7px 0px rgba(0,0,0,0.78);
+  -moz-box-shadow: 11px 13px 7px 0px rgba(0,0,0,0.78);
+  box-shadow: 11px 13px 7px 0px rgba(0,0,0,0.78); */
 }
 
 .btn:hover {
-  background-color: #3e8e41
+  background-color: #3e8e41;
+  /* transform: scale(1.1); */
 }
 
 .btn:active {
   background-color: #3e8e41;
-  box-shadow: 0 4px #666;
+  box-shadow: 5px 6px 4px rgb(51, 51, 51);
   transform: translateY(3px);
 }
 
 .links-home {
   padding-left: 10px;
-}
-
-.derecha {
-  background-color: white;
-  background-image: url("https://www.sena-sofia-plus.co/wp-content/uploads/2013/07/Carreras-tecnicas-en-Sena-Sofia-Plus-.png");
-  background-position: 95% 75%;
-  background-repeat: no-repeat;
-  border-radius: 20px;
-  width: 400px;
-  height: 330px;
-  text-align: center;
-  color: white;
-}
-
-.logoSena {
-  height: 100px;
-  margin-top: 40px;
-}
-
-.logoWhatsapp {
-  height: 20px;
 }

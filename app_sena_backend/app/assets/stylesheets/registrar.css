@@ -1,8 +1,5 @@
 .main-registrar {
-  background-color: grey;
-  background-image: url("https://auren.com/co/wp-content/uploads/2019/12/segunda-convocatoria-sena-2018.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
+  background-color: white;
   position: absolute;
   top: 0%;
   bottom: 0%;
@@ -14,11 +11,19 @@
   align-items: center;
 }
 
-.centro-registrar {
-  border-radius: 20px;
-  width: 300px;
-  height: 330px;
+.izquierda-registrar {
+  background-image: url("https://auren.com/co/wp-content/uploads/2019/12/segunda-convocatoria-sena-2018.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 915px;
   background-color: white;
+  border: 1px solid red;
+}
+
+.derecha-registrar {
+  background-color: transparent;
+  border-radius: 20px;
+  width: 350px;
 }
 
 .centrar-registrar {

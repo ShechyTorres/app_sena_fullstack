@@ -7,46 +7,66 @@
   <body>
     <main class="main-new">
       <section class="izquierda">
-        <h2 class="centrar">Iniciar Sesión</h2>
-
-        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-          <div class="field centrar">
-            <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Correo", class: "casilla" %>
-          </div>
-
-          <div class="field centrar">
-            <%# f.label :password %><br />
-            <%= f.password_field :password, autocomplete: "current-password", placeholder: "Contraseña", class: "casilla" %>
-          </div>
-          <br>
-
-          <% if devise_mapping.rememberable? %>
-            <div class="field">
-              <%= f.check_box :remember_me %>
-              <%= f.label "recuerdame" %>
-            </div>
-          <% end %>
-          <br>
-
-          <div class="actions centrar">
-            <%= f.submit "Entrar", class: "btn" %>
-          </div>
-        <% end %>
-        <br>
-
-        <div class="links-home">
-          <%= render "devise/shared/links" %>
-        </div>
       </section>
 
       <section class="derecha">
-        <%= image_tag "logoSena.png", class: "logoSena" %>
-        <h1>Centro Industrial y de Aviación</h1>
-        <p> 
-          <%= image_tag "http://assets.stickpng.com/images/580b57fcd9996e24bc43c543.png", class: "logoWhatsapp" %>
-          3090930930
-        </p>
+        <aside class="derecha-arriba">
+          <div class="derecha-div">
+            <%= image_tag "logoSena.png", class: "logoSena" %>
+          </div>
+          <div class="derecha-div">
+            <h3>CONTÁCTENOS</h3>
+            <p> 
+              <%= image_tag "http://assets.stickpng.com/images/580b57fcd9996e24bc43c543.png", class: "logoMini" %>
+              3020930930
+            </p>
+            <p> 
+              <%= image_tag "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Instagram-Icon.png/800px-Instagram-Icon.png", class: "logoMini" %>
+              #sena
+            </p>
+            <p> 
+              <%= image_tag "https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg", class: "logoMini" %>
+              sena
+            </p>
+          </div>
+        </aside>
+
+        <aside class="derecha-abajo">
+          <h2 class="centrar">Iniciar Sesión</h2>
+
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <div class="field centrar">
+              <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Correo", class: "casilla" %>
+            </div>
+
+            <div class="field centrar">
+              <%# f.label :password %><br />
+              <%= f.password_field :password, autocomplete: "current-password", placeholder: "Contraseña", class: "casilla" %>
+            </div>
+            <br>
+
+            <% if devise_mapping.rememberable? %>
+              <div class="field">
+                <%= f.check_box :remember_me %>
+                <%= f.label "recuerdame" %>
+              </div>
+            <% end %>
+            <br>
+
+            <div class="actions centrar">
+              <%= f.submit "Entrar", class: "btn" %>
+            </div>
+          <% end %>
+          <br>
+          
+          <div class="links-home">
+            <%= render "devise/shared/links" %>
+          </div>
+          <br>
+          
+        </aside>
       </section>
+      
     </main>
   </body>
 </html>
