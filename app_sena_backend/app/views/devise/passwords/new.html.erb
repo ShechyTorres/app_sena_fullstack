@@ -30,15 +30,16 @@
           </div>
         </aside>
         
-        <section class="derecha abajo">
-          <h2 class="centrar-registrar">Olvidaste tu contraseña?</h2>
+        <section class="derecha-abajo">
+          <h2 class="centrar">Olvidaste tu contraseña?</h2>
 
           <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
             <%= render "devise/shared/error_messages", resource: resource %>
 
             <div class="field">
-              <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Correo Electronico", class: "casilla-registrar" %>
+              <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Correo Electrónico", class: "casilla" %>
             </div>
+            <br>
 
             <div class="actions centrar">
               <%= f.submit "Send me reset password instructions", class: "btn" %>
@@ -50,6 +51,7 @@
             <%= render "devise/shared/links" %>
           </div>
           <br>
+          
         </section>
       </section>
     </main>

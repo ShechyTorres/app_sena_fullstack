@@ -33,34 +33,36 @@
 
         <aside class="derecha-abajo">
           <h2 class="centrar-registrar">Registrarse</h2>
+          
           <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
             <%= render "devise/shared/error_messages", resource: resource %>
 
             <div class="field">
-              <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Correo Electrónico", class: "casilla-registrar" %>
+              <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Correo Electrónico", class: "casilla" %>
             </div>
 
             <div class="field">
               <% if @minimum_password_length %>
               <em>(Mínimo <%= @minimum_password_length %> carácteres)</em>
               <% end %><br />
-              <%= f.password_field :password, autocomplete: "new-password", placeholder: "Contraseña", class: "casilla-registrar" %>
+              <%= f.password_field :password, autocomplete: "new-password", placeholder: "Contraseña", class: "casilla" %>
             </div>
 
             <div class="field">
-              <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Confirmar contraseña", class: "casilla-registrar" %>
+              <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Confirmar contraseña", class: "casilla" %>
             </div>
+            <br>
 
             <div class="actions centrar">
               <%= f.submit "Registrar", class: "btn" %>
             </div>
-            <% end %>
-            <br>
+          <% end %>
+          <br>
 
-            <div class="links-home">
-              <%= render "devise/shared/links" %>
-            </div>
-            <br>
+          <div class="links-home">
+            <%= render "devise/shared/links" %>
+          </div>
+          <br>
         </aside>
 
       </section>

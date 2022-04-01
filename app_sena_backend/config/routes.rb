@@ -8,6 +8,12 @@ Rails.application.routes.draw do
   end
 
   resources :areas
+  get 'areas/new', to: 'areas#new'
+  post 'areas', to: 'areas#create'
+  get 'area/:id', to: 'areas#show'
+  get 'areas/:id/edit', to: 'areas#edit', as: 'edit_areas'
+  patch 'area/:id', to: 'areas#update'
+  delete 'area/:id', to: 'areas#delete'
   # get 'users/sessions#destroy'
 
   # get "users/sing_out#destroy"

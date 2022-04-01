@@ -1,2 +1,17 @@
-<h1>Areas#new</h1>
-<p>Find me in app/views/areas/new.html.erb</p>
+<h1>Crear de Areas</h1>
+
+<%= form_for @area do |f| %>
+
+  <div>
+    <%= f.label :image_area %>
+    <%= f.text_field :image_area %>
+  </div>
+  <div>
+    <%= f.label :title_area %>
+    <%= f.text_field :title_area %>
+  </div>
+  <div>
+    <%= f.submit %>
+  </div>
+  
+<% end %>
