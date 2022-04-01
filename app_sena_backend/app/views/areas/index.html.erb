@@ -1,3 +1,15 @@
+<%= link_to "Regresar", :back %>
+
 <h1>Listado de Productos</h1>
 
-<%= render @areas %>
+<table>
+  <tr>
+    <thead>
+      <th>Id</th>
+      <th>Imagen</th>
+      <th>Nombre</th>
+      <th>Acción</th>
+    </thead>
+  </tr>
+  <%=  render @areas %>
+  </table>
