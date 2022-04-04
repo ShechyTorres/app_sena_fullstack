@@ -1,0 +1,10 @@
+<div class="">
+  <tr class="tr-index">
+    <th class="th-index"><%= programa.area_id %></th>
+    <td class="td-index"><%= programa.title_program %></td>
+    <td class="td-index">
+      <%= link_to "Editar", edit_area_program_path(area), class: "link" %>
+      <%= button_to "Eliminar", area, method: :delete, data: { confirm: "¿Deseas eliminar esta area?"}, class:"link" %>
+    </td>
+  </tr>
+</div>

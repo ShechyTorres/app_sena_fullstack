@@ -7,13 +7,9 @@ Rails.application.routes.draw do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
 
-  resources :areas
-  get 'areas/new', to: 'areas#new'
-  post 'areas', to: 'areas#create'
-  get 'area/:id', to: 'areas#show'
-  get 'areas/:id/edit', to: 'areas#edit', as: 'edit_areas'
-  patch 'area/:id', to: 'areas#update'
-  delete 'areas/:id', to: 'area#delete'
+  resources :areas do 
+    resources :programas, module: :areas
+  end 
 
   # get 'users/sessions#destroy'
 
