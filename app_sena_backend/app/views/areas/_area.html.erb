@@ -1,15 +1,5 @@
 <%= stylesheet_link_tag "areas" %>
 
-<table>
-  <tr>
-    <thead>
-      <th>Id</th>
-      <th>Imagen</th>
-      <th>Nombre</th>
-      <th>Acción</th>
-    </thead>
-  </tr>
-    <% @areas.each do |area|  %>
   <tr>
     <td><%= area.id %></td>
     <td><%= image_tag area.image_area, :class => "image_tamaño" %></td>
@@ -19,5 +9,3 @@
       <%= link_to "Eliminar", area, method: :delete, data: { confirm: "¿Deseas eliminar esta area?"} %>
     </td>
   </tr>
-    <% end %>
-</table>
