@@ -14,14 +14,294 @@
  *= require_self
  */
 
+
+/* ESTILOS GENERALES */
+
+:root {
+  /* GENERALES */
+  --blanco: #fff;
+  --blancoOpaco: #ccc;
+  --blancoBrillante: #f5f5f5;
+  /* HOME */
+  --aguaMarina: #00acee;
+  --naranjaClaro: #ffa500;
+  --naranjaOscurito: #ff7200;
+  --naranjaOscuro: #ff3f00;
+  /* AREAS */
+}
+
+body {
+  background-color: #ddd;
+}
+
+.main-home {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  box-sizing: border-box;
+}
+
+.nav-home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+}
+
+.miniLogoSena {
+  height: 40px;
+  margin-left: 15px;
+}
+
+.span-cerrar {
+  border: 1px solid var(--blanco);
+  margin-right: 15px;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 1px var(--blancoOpaco);
+}
+
+.span-cerrar:hover {
+  border: 1px solid var(--blancoBrillante);
+  box-shadow: 0px 0px 10px 1px var(--blancoBrillante);
+}
+
+.btn-cerrar {
+  text-decoration: none;
+  color: var(--blancoOpaco);
+}
+
+.btn-cerrar:hover {
+  text-decoration: none;
+  color: var(--blancoBrillante);
+}
+
+section {
+  height: 88%;
+}
+
 footer {
-  border: 1px solid blue;
+  display: block;
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 30px;
-  background-color: gray;
+  height: 33px;
+  background-color: #000;
+  color: var(--blanco);
   text-align: center;
-  margin-top: 20px;
+}
+
+
+/* ESTILOS HOME */
+
+
+/* Tabs */
+
+.tabs {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 680px;
+  height: 360px;
+  padding: 30px 20px;
+  background: #f5f5f5;
+  box-shadow: 5px 5px 10px 5px #ccc;
+  overflow: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+
+/* Tabs-header */
+
+.tabs .tab-header {
+  float: left;
+  width: 180px;
+  border-right: 1px solid #ccc;
+  padding: 50px 0px;
+}
+
+.tabs .tab-header div {
+  height: 50px;
+  line-height: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #888;
+  cursor: pointer;
+  padding-left: 10px;
+}
+
+.tabs .tab-header>div:hover,
+.tabs .tab-header>div.active {
+  color: var(--naranjaOscuro);
+}
+
+
+/* Tab-indicator */
+
+.tabs .tab-indicator {
+  position: absolute;
+  width: 4px;
+  height: 50px;
+  background: var(--naranjaOscuro);
+  left: 198px;
+  top: 80px;
+  transition: all 500ms ease-in-out;
+}
+
+
+/* Tab-content */
+
+.tabs .tab-content {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.tabs .tab-content div {
+  position: absolute;
+  text-align: center;
+  padding: 40px 20px;
+  top: -280px;
+  transition: all 500ms ease-in-out;
+}
+
+.tabs .tab-content>div.active {
+  top: 0px;
+}
+
+
+/* ESTILOS AREAS */
+
+
+/* Botón atrás */
+
+.span-atras {
+  position: fixed;
+  border: 1px solid #000;
+  background-color: var(--naranjaOscurito);
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px 0px 0px 10px;
+  cursor: pointer;
+}
+
+.span-atras:active {
+  transform: translateY(3px);
+}
+
+.btn-atras {
+  text-decoration: none;
+  color: #000;
+}
+
+
+/* Boton nuevo */
+
+.span-nuevo {
+  position: fixed;
+  right: 24%;
+  border: 1px solid #000;
+  background-color: rgb(44, 114, 44);
+  border-radius: 5px;
+  padding: 5px;
+  margin: 22px 0px 10px 0px;
+  cursor: pointer;
+}
+
+.span-nuevo:active {
+  transform: translateY(3px);
+}
+
+.btn-nuevo {
+  text-decoration: none;
+  color: #000;
+}
+
+
+/* h2 */
+
+h2 {
+  text-align: center;
+}
+
+
+/* Imagenes */
+
+.image_tamaño {
+  border: 1px solid black;
+  height: 50px;
+  width: 100px;
+}
+
+
+/* Tabla index */
+
+.table-index {
+  width: 80%;
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin: auto;
+}
+
+.th-index,
+.td-index {
+  border: 1px solid black;
+  text-align: center;
+  padding: 2px;
+}
+
+.link {
+  text-decoration: none;
+}
+
+
+/* Tabla nuevo */
+
+.table-nuevo {
+  /* width: 80%; */
+  margin: auto;
+}
+
+.th-nuevo,
+.td-nuevo {
+  text-align: center;
+  padding: 5px;
+}
+
+
+/* Boton Ver Lista */
+
+.span-ver {
+  border: 1px solid #000;
+  background-color: var(--naranjaOscurito);
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.span-ver:active {
+  transform: translateY(3px);
+}
+
+
+/* Boton crear nuevo */
+
+.span-crear {
+  border: 1px solid #000;
+  background-color: rgb(44, 114, 44);
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.span-crear:active {
+  transform: translateY(3px);
 }

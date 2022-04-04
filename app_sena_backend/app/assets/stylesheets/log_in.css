@@ -123,3 +123,7 @@
 .links-home {
   padding-left: 10px;
 }
+
+footer {
+  display: none;
+}

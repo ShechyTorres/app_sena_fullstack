@@ -13,7 +13,8 @@ Rails.application.routes.draw do
   get 'area/:id', to: 'areas#show'
   get 'areas/:id/edit', to: 'areas#edit', as: 'edit_areas'
   patch 'area/:id', to: 'areas#update'
-  delete 'area/:id', to: 'areas#delete'
+  delete 'areas/:id', to: 'area#delete'
+
   # get 'users/sessions#destroy'
 
   # get "users/sing_out#destroy"

@@ -1,138 +1,55 @@
-<html>
-  <head>
-    <%= stylesheet_link_tag "home" %>
-    <title>AppSena</title>
-  </head>
-  <body>  
-    <main class="main-home">
-      <header>
-        <nav class="nav-home">
-          <%= image_tag "logoSena.png", class: "miniLogoSena" %>
-          <span>
-          <%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete %>
-          </span>
-        </nav>
-      </header>
-    
-      <section class="div-home">
-        <div class="tabs">
-          <div class="tab-header">
-            <%# <li class="nav-links active"><%= link_to "Areas", areas_path, :method => :get </li> %>
-            <div class="active">
-              <i class="fa fa-bienvenido">Bienvenido</i>
-            </div>
-            <div>
-              <i class="fa fa-areas">Areas</i>
-            </div>
-            <div>
-              <i class="fa fa-programas">Programas</i>
-            </div>
-          </div>
-
-          <div class="tab-indicator"></div>
-
-          <div class="tab-content">
-            <div class="active">
-              <h2>Bienvenido</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus possimus doloribus dolorem. Ex, totam odit. Illum eius accusamus laudantium explicabo voluptate harum ipsa enim ducimus! Fugiat similique quo libero quam!</p>
-            </div>
-            <div>
-              <h2>Areas</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus possimus doloribus dolorem. Ex, totam odit. Illum eius accusamus laudantium explicabo voluptate harum ipsa enim ducimus! Fugiat similique quo libero quam!</p>
-              <%= link_to "Ver Areas", areas_path, :method => :get, class: "btn"%>
-              <%= link_to "Crear Area", areas_new_path, :method => :get, class: "btn" %>
-            </div>
-            <div>
-              <h2>Programas</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus possimus doloribus dolorem. Ex, totam odit. Illum eius accusamus laudantium explicabo voluptate harum ipsa enim ducimus! Fugiat similique quo libero quam!</p>
-              <%= link_to "Ver Programas", areas_path, :method => :get, class: "btn"%>
-              <%= link_to "Crear Programas", areas_path, :method => :get, class: "btn" %>
-            </div>
-          </div>
-        </div>
-      </section>
-
-    </main>
-
-    <script>
-      function _class(name) {
-        return document.getElementsByClassName(name);
-      }
-
-      let tabpanes = _class("tab-header")[0].getElementsByTagName("div");
-
-      for (let i = 0; i < tabpanes.length; i++) {
-        tabpanes[i].addEventListener("click", function() {
-          _class("tab-header")[0].getElementsByClassName("active")[0].classList.remove("active");
-          tabpanes[i].classList.add("active");
-
-          _class("tab-indicator")[0].style.top = `calc(80px + ${i*50}px)`;
-
-          _class("tab-content")[0].getElementsByClassName("active")[0].classList.remove("active");
-          _class("tab-content")[0].getElementsByTagName("div")[i].classList.add("active");
-        });
-      }
-    </script>
-
-  </body>
-</html>
-<%# ************************ %>
-  <%# <div class="content">
-    <!-- Nav pills -->
-    <ul class="nav nav-pills" role="tablist">
-      <li class="nav-item">
-        <a class="nav-link active" data-toggle="pill" href="#login">Login</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-toggle="pill" href="#regis">Register</a>
-      </li>
-    </ul>
-
-    <!-- Tab panes -->
-    <div class="tab-content">
-      <div id="login" class="container tab-pane active">
-        <form>
-          <div class="form-group">
-            <label for="exampleFormControlInput1">Email address</label>
-            <input type="email" class="form-control is-valid" id="exampleFormControlInput1" placeholder="name@example.com">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control is-invalid" id="exampleInputPassword1" placeholder="Password">
-            <small id="emailHelp" class="form-text text-muted">Password incorrect.</small>
-          </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-      </div>
-      <div id="regis" class="container tab-pane fade">
-        <form>
-          <div class="form-group">
-            <label for="InputName">Full Name</label>
-            <input type="text" class="form-control is-valid" id="InputName" placeholder="Full Name">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-          </div>
-          <div class="form-group">
-            <label for="InputUsername">Username</label>
-            <input type="text" class="form-control is-valid" id="InputUsername" placeholder="Username">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-          </div>
-          <div class="form-group">
-            <label for="exampleFormControlInput2">Email address</label>
-            <input type="email" class="form-control is-valid" id="exampleFormControlInput2" placeholder="name@example.com">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword2">Password</label>
-            <input type="password" class="form-control is-invalid" id="exampleInputPassword2" placeholder="Password">
-            <small id="emailHelp" class="form-text text-muted">Password incorrect.</small>
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPasswordVer">Verify Password</label>
-            <input type="password" class="form-control is-invalid" id="exampleInputPasswordVer" placeholder="Password">
-          </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-      </div>
+<div class="tabs">
+  <div class="tab-header">
+    <div class="active">
+      <i class="fa fa-bienvenido">Bienvenido</i>
     </div>
-  </div> %>
+    <div>
+      <i class="fa fa-areas">Areas</i>
+    </div>
+    <div>
+      <i class="fa fa-programas">Programas</i>
+    </div>
+  </div>
+
+  <div class="tab-indicator"></div>
+
+  <div class="tab-content">
+    <div class="active">
+      <h2>Bienvenido</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus possimus doloribus dolorem. Ex, totam odit. Illum eius accusamus laudantium explicabo voluptate harum ipsa enim ducimus! Fugiat similique quo libero quam!</p>
+    </div>
+    <div>
+      <h2>Areas</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus possimus doloribus dolorem. Ex, totam odit. Illum eius accusamus laudantium explicabo voluptate harum ipsa enim ducimus! Fugiat similique quo libero quam!</p>
+      <%= link_to "Ver Areas", areas_path, :method => :get, class: "span-ver link"%>
+      <%= link_to "Crear Area", areas_new_path, :method => :get, class: "span-crear link" %>
+    </div>
+    <div>
+      <h2>Programas</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus possimus doloribus dolorem. Ex, totam odit. Illum eius accusamus laudantium explicabo voluptate harum ipsa enim ducimus! Fugiat similique quo libero quam!</p>
+      <%= link_to "Ver Programas", areas_path, :method => :get, class: "span-ver link"%>
+      <%= link_to "Crear Programas", areas_path, :method => :get, class: "span-crear link" %>
+    </div>
+  </div>
+</div>
+
+<%# JavaScript %>
+<script>
+  function _class(name) {
+    return document.getElementsByClassName(name);
+  }
+
+  let tabpanes = _class("tab-header")[0].getElementsByTagName("div");
+
+  for (let i = 0; i < tabpanes.length; i++) {
+    tabpanes[i].addEventListener("click", async function() {
+      _class("tab-header")[0].getElementsByClassName("active")[0].classList.remove("active");
+      tabpanes[i].classList.add("active");
+
+      _class("tab-indicator")[0].style.top = `calc(80px + ${i*50}px)`;
+
+      _class("tab-content")[0].getElementsByClassName("active")[0].classList.remove("active");
+      _class("tab-content")[0].getElementsByTagName("div")[i].classList.add("active");
+    });
+  }
+</script>

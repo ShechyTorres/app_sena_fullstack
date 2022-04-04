@@ -1,19 +1,29 @@
-<%= link_to "Regresar", :back %>
+<%# <span class="span-atras">
+  <b><%= link_to "Ver Areas", areas_path, :method => :get, class: "btn-atras"</b>
+</span> %>
 
-<h1>Crear de Areas</h1>
+<span class="span-atras">
+  <b><%= link_to "Inicio", :back, class: "btn-atras" %></b>
+</span>
 
-<%= form_for @area do |f| %>
+<div class="tabs">
+  <h2>Crear Nueva Area</h2>
 
-  <div>
-    <%= f.label :image_area %>
-    <%= f.text_field :image_area %>
-  </div>
-  <div>
-    <%= f.label :title_area %>
-    <%= f.text_field :title_area %>
-  </div>
-  <div>
-    <%= f.submit %>
-  </div>
-  
-<% end %>
+  <%= form_for @area do |f| %>
+
+  <table class="table-nuevo">
+    <tr class="tr-nuevo">
+        <th class="th-nuevo">Url de imagen</th>
+        <td class="td-nuevo"><%= f.text_field :image_area %></td>
+    </tr>
+    <tr class="tr-nuevo">
+        <th class="th-nuevo">Título del Area</th>
+        <td class="td-nuevo"><%= f.text_field :title_area %></td>
+    </tr>
+    <tr class="tr-nuevo">
+      <td colspan=2 class="td-nuevo"><%= f.submit "Crear", class: "span-crear" %></td>
+    </tr>
+  </table>
+    
+  <% end %>
+</div>

@@ -1,15 +1,23 @@
-<%= link_to "Regresar", :back %>
+<span class="span-atras">
+  <b><%= link_to "Inicio", :back, class: "btn-atras" %></b>
+</span>
 
-<h1>Listado de Productos</h1>
+<span class="span-nuevo">
+  <b><%= link_to "Nueva", areas_new_path, :method => :get, class: "btn-nuevo" %></b>
+</span>
 
-<table>
-  <tr>
-    <thead>
-      <th>Id</th>
-      <th>Imagen</th>
-      <th>Nombre</th>
-      <th>Acción</th>
-    </thead>
-  </tr>
-  <%=  render @areas %>
+<div class="tabs">
+  <h2>Listado de Areas</h2 >
+
+  <table class="table-index">
+    <tr class="tr-index">
+      <thead>
+        <th class="th-index">Id</th>
+        <th class="th-index">Imagen</th>
+        <th class="th-index">Nombre</th>
+        <th class="th-index">Acción</th>
+      </thead>
+    </tr>
+    <%=  render @areas %>
   </table>
+</div>

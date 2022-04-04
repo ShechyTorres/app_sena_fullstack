@@ -32,7 +32,7 @@ class AreasController < ApplicationController
       end
   end
 
-  def destroy
+  def delete
     @area = Area.find(params[:id])
     @area.destroy
     redirect_to areas_path
@@ -42,4 +42,4 @@ class AreasController < ApplicationController
     def area_params
       params.require(:area).permit(:image_area, :title_area)
     end
-end
+  end

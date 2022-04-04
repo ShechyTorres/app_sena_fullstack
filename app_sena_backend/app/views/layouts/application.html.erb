@@ -14,18 +14,23 @@
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
     
-    
-      <%# user_signed_in? %>
-      <%# link_to "Log out", destroy_user_session_path, method: :delete %>
-      <%# link_to "Iniciar", new_user_session_path %>
-      
+      <main class="main-home">
+        <header>
+          <nav class="nav-home">
+            <%= image_tag "logoSena.png", class: "miniLogoSena" %>
+            <span class="span-cerrar">
+              <%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete, class: "btn-cerrar" %>
+            </span>
+          </nav>
+        </header>
 
-    
-    
-    <%= yield %>
+        <%# Aquí hay una etiqueta <section> invisible, al que solo lo llamamos en css %>
 
-      <%# <footer>
-        <b>Versión 1.0</b>
-      </footer> %>
+      <%= yield %>
+
+        <footer>
+          <b>Versión 1.0</b>
+        </footer>
+      </main>
   </body>
 </html>

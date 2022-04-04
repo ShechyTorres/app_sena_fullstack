@@ -1,11 +1,11 @@
-<%= stylesheet_link_tag "areas" %>
-
-  <tr>
-    <td><%= area.id %></td>
-    <td><%= image_tag area.image_area, :class => "image_tamaño" %></td>
-    <td><%= area.title_area %></td>
-    <td>
-      <%= link_to "Editar", edit_area_path(area) %>
-      <%= link_to "Eliminar", area, method: :delete, data: { confirm: "¿Deseas eliminar esta area?"} %>
+<div class="">
+  <tr class="tr-index">
+    <th class="th-index"><%= area.id %></th>
+    <td class="td-index"><%= image_tag area.image_area, :class => "image_tamaño" %></td>
+    <td class="td-index"><%= area.title_area %></td>
+    <td class="td-index">
+      <%= link_to "Editar", edit_area_path(area), class: "link" %>
+      <%= link_to "Eliminar", area, method: :delete, data: { confirm: "¿Deseas eliminar esta area?"}, class:"link" %>
     </td>
   </tr>
+</div>
